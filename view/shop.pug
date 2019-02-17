@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hello</title>
+  <link rel="stylesheet" type="text/css" href="/bootstrap/bootstrap.min.css">
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/bootstrap-js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/css.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-light bg-warning sticky-top">
+  <a class="navbar-brand">node practice</a>
+<div class="navbar-collapse" >
+  <ul class="navbar-nav lead ml-auto" style="font-weight: 600;f">
+    <li class="nav-item ">
+      <a href="/" class="nav-link">home</a>
+    </li>
+    <li>
+      <a href="/shop" class="nav-link">shop</a>
+    </li>
+    <li class="nav-item">
+      <a href="/product" class="nav-link">product</a>
+    </li>
+    <li>
+      <a href="/cart" class="nav-link">cart</a>
+    </li>
+    <li>
+      <a href="/order" class="nav-link">order</a>
+    </li>
+    <li>
+      <a href="/Add_product" class="nav-link">Add Product</a>
+    </li>
+    <li>
+      <a href="/Admin_product" class="nav-link">Admin Product</a>
+    </li>
+  </ul>
+</div>
+</nav>
+<br>
+<div class="container">
+<div class="row">
+  each val in data
+    <div class="col-md-3">
+      <br>
+      <div class="card-deck">
+        <div class="card" style="border: 2px solid #37EB0D">
+        <img src=#{val.Image} class="card-img-top" alt="..." style="height: 140px;">
+        <div class="card-body">
+        <h5 class="card-title">#{val.title}</h5>
+        <p class="card-text"><b>description:</b><br>#{val.description}</p>
+        <p class="card-text"><b>price:</b><br>#{val.price}<b>$</b></p>
+        <div>
+        <a href='/product/#{val.uid}'  class="btn btn-outline-warning" style="color:black;font-weight: 600;">details</a>
+          <button class="btn btn-primary" style="color:black;font-weight: 600;">Add to cart</button>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+
+
